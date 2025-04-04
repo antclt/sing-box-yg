@@ -72,7 +72,7 @@ else
 echo "$U" > $WD/UUID.txt
 U=$(cat "$WD/UUID.txt" 2>/dev/null)
 fi
-curl -sL https://raw.githubusercontent.com/yonggekkk/sing-box-yg/main/app.js -o "$kp"/app.js
+curl -sL https://raw.githubusercontent.com/antclt/sing-box-yg/main/app.js -o "$kp"/app.js
 sed -i '' "15s/name/$sb/g" "$kp"/app.js
 sed -i '' "59s/key/$U/g" "$kp"/app.js
 sed -i '' "90s/name/$USR/g" "$kp"/app.js
@@ -241,7 +241,7 @@ gad() {
 }
 
 if [ ! -f serv00keep.sh ]; then
-curl -sSL https://raw.githubusercontent.com/yonggekkk/sing-box-yg/main/serv00keep.sh -o serv00keep.sh && chmod +x serv00keep.sh
+curl -sSL https://raw.githubusercontent.com/antclt/sing-box-yg/main/serv00keep.sh -o serv00keep.sh && chmod +x serv00keep.sh
 echo '#!/bin/bash
 rd() { echo -e "\e[1;91m$1\033[0m"; }
 gn() { echo -e "\e[1;32m$1\033[0m"; }
@@ -324,7 +324,7 @@ cp
 fi
 if [ ! -s sb.txt ] && [ ! -s ag.txt ]; then
 DD="." && mkdir -p "$DD" && FI=()
-FI=("https://github.com/yonggekkk/Cloudflare_vless_trojan/releases/download/serv00/sb web" "https://github.com/yonggekkk/Cloudflare_vless_trojan/releases/download/serv00/server bot")
+FI=("https://github.com/antclt/Cloudflare_vless_trojan/releases/download/serv00/sb web" "https://github.com/antclt/Cloudflare_vless_trojan/releases/download/serv00/server bot")
 declare -A FM
 grn() {
     local chars=abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890
@@ -1203,7 +1203,7 @@ EOF
 
 cat clash_meta.yaml > ${FP}/${U}_clashmeta.txt
 cat sing_box.json > ${FP}/${U}_singbox.txt
-curl -sL https://raw.githubusercontent.com/yonggekkk/sing-box-yg/main/index.html -o "$FP"/index.html
+curl -sL https://raw.githubusercontent.com/antclt/sing-box-yg/main/index.html -o "$FP"/index.html
 V2N="https://${USR}.serv00.net/${U}_v2sub.txt"
 CM="https://${USR}.serv00.net/${U}_clashmeta.txt"
 SB="https://${USR}.serv00.net/${U}_singbox.txt"
@@ -1235,7 +1235,7 @@ Argo Domain: ${ad}
 $vll
 
 Note: If reality domain was CF domain, activates:
-Can be used with https://github.com/yonggekkk/Cloudflare_vless_trojan project
+Can be used with https://github.com/antclt/Cloudflare_vless_trojan project
 1. Proxyip info (with port):
 Method 1 (global): Set var: proxyip = $IP:$vl  
 Method 2 (single node): Change path to: /pyip=$IP:$vl
